@@ -1,4 +1,0 @@
-Error in rbind(deparse.level, ...) : 
-  numbers of columns of arguments do not match
-Calls: <Anonymous> ... write_snap -> read_manifest -> do.call -> <Anonymous> -> rbind
-Execution halted
