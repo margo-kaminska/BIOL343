@@ -1,7 +1,7 @@
 ---
 title: "BIOL343 Coding Challenge 2"
 author: "Group 6"
-date: "`r format(Sys.Date(), '%d %B %Y')`"
+date: "Sept 24th, 2026"
 output: 
     html_document:  #Add options for html output 
         toc: true #Add table of contents 
@@ -32,7 +32,7 @@ setwd("C:/Users/inbox/OneDrive/Desktop/BIOL343-1")
 remotes::install_url("https://quantitative.bio/downloads/positpal.tar.gz", upgrade = "never")
 library(positpal)
 
-positpal::start("Group_6_CC2.Rmd")
+
 
 rmarkdown::render("Group_6_CC2.Rmd")
 
