@@ -2,3 +2,5 @@
 This is a repository for my BIOL 343 - Statistics for Biology class
 
 Making more changes to this file
+
+Checking updates
