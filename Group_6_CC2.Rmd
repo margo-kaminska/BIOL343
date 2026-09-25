@@ -1,7 +1,7 @@
 ---
 title: "BIOL343 Coding Challenge 2"
 author: "Group 6"
-date: "Sept 24th, 2026"
+date: "Sept 25th, 2026"
 output: 
     html_document:  #Add options for html output 
         toc: true #Add table of contents 
@@ -67,7 +67,7 @@ Table of the variable, description, and units from A1_Data_Excel Dataset
 ---------------------------------------------------
 Variable|Description|Units
 --------|-----------|-----
-population_type|Distinguishes between Asexual and Sexual population types|Counts
+population_type|Distinguishes between Asexual and Sexual population types|Categorical (A/S)
 ovary_width|The area of the ovary of the flower|mm
 ovary_height|The height of the ovary of the flowe|mm
 flower_number|The total number of flowers on the plant|Counts
@@ -121,7 +121,7 @@ Write the formula you used for ovary area as a **full-line equation** in LaTeX (
 
 (equation here)
 $$OvaryWidthMM \times OvaryHeightMM$$
-$m^2$
+The units are $mm^2$
 
 # Dynamic table
 
@@ -168,9 +168,7 @@ Your project folder is a GitHub repository (Chapter 6). Before you submit:
 1. Make sure the repository contains the `.Rmd`, `data/A1_Data_Excel.csv`, `images/` with your photo, and the knitted `.html`, and that everything is **committed and pushed**.
 1. Paste the **SHA** of your final commit (Chapter 6, *Timeline*; the 7-character code shown beside each commit on GitHub) below, formatted as in-line code with back-ticks.
 
-# SHA 
-
-Final commit SHA: 
+Final commit SHA: 27f18d7
 
 # DO THIS LAST {-}
 
