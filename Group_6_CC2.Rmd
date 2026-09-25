@@ -10,44 +10,18 @@ output:
             collapsed: false #expand subsections 
 ---
 
-### Names, Student Numbers, and Links to GitHub
-
-1. **Margo Kaminska** - 20449041
-    + [BIOL343_CC](https://github.com/margo-kaminska/BIOL343)
-2. **Emma Popple** - 20429887
-    + [BIOL343_CC]
-3. **Kaylee Ellwood** - 20467453
-    + [BIOL343_CC]
-4. **Sabrina Baker** - 20449887
-    + [BIOL343_CC]
-5. **Tea Hope** - 20459579
-    + [BIOL343_CC]
-6. **Victoria Gutierrez** - 2051720
-    + [BIOL343_CC]
-
-```
-getwd()
-setwd("C:/Users/inbox/OneDrive/Desktop/BIOL343-1")
-
-remotes::install_url("https://quantitative.bio/downloads/positpal.tar.gz", upgrade = "never")
-library(positpal)
-
-
-
-rmarkdown::render("Group_6_CC2.Rmd")
-
-positpal::stop_capture()
-positpal::export_capture()
-```
 
 # DO THIS FIRST {-}
 
 Copy and paste this into your R Console to start positpal, but replace `FILENAME.Rmd` with the name you are going to use for the .R or .Rmd file you are going to upload (for this challenge, rename the template first, e.g. `Group_#_CC2.Rmd`, and use that exact name). **Do not include it as a code chunk.**
 
 ```
+getwd()
+setwd("C:/Users/inbox/OneDrive/Desktop/BIOL343-1")
 install.packages("remotes")
 remotes::install_url("https://quantitative.bio/downloads/positpal.tar.gz", upgrade = "never")
-positpal::start("FILENAME.Rmd")
+positpal::start("Group_6_CC2.Rmd")
+rmarkdown::render("Group_6_CC2.Rmd")
 ```
 
 Before you run it: open the project folder for this challenge in Positron (*File → Open Folder…*) so that it is your working directory, save this file in that folder under the name you will upload, and check that autosave is on (*File → Auto Save*). The first time you use positpal on a computer, `start()` will ask you to run `positpal::accept_eula()` once; do that, then run the `start()` line again. After a few minutes of work, check in the Explorer pane that the `.capture/snaps` folder inside your project is filling up with files. If it is not, or if `start()` refuses to record, run `positpal::doctor("FILENAME.Rmd")` and bring the output to tutorial or office hours. Run the `start()` line again at the start of every session you spend on this file.
@@ -60,16 +34,27 @@ Replace the single `output: html_document` line in the YAML header above with th
 
 Write the group members as an **ordered list** (Chapter 5, *Lists*). For each member give the **name in bold**, then the student number, and then a **sub-item** containing a clickable **link** to that member's GitHub repository, written with Markdown link syntax (Chapter 5, *Links*).
 
-1. **Name** — student number
-    + [BIOL343_CC](https://github.com/your_user_name/BIOL343_CC)
-1. 
+### Names, Student Numbers, and Links to GitHub
+
+1. **Margo Kaminska** - 20449041
+    + [BIOL343_CC](https://github.com/margo-kaminska/BIOL343)
+2. **Emma Popple** - 20467453
+    + [BIOL343_CC](https://github.com/emmapopple/BIOL343_CC)
+3. **Kaylee Ellwood** - 20391007
+    + [BIOL343_CC2](https://github.com/kaylee61/BIOL343_CC2.git)
+4. **Sabrina Baker** - 20449887
+    + [BIOL343_CC](https://github.com/sabrina-baker/BIOL343_CC02)
+5. **Téa Hope** — 20459579
+    + [BIOL343_CC](https://github.com/teahope20/BIOL343.git)
+6. **Victoria Gutierrez** - 20517120
+    + [BIOL343_CC](https://github.com/Victoria-GA/BIOL343_TUT02-CC2_VictoriaGutierrez)
 
 # Setup chunk
 
 The chunk below sets the default options for every other chunk in the document. Add the **chunk option** (Chapter 5, *Code Chunk Arguments*) that runs it without showing either the code or any output in the knitted report.
 
 ```{r setup, include=F}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE, message=FALSE)
 ```
 
 # Data dictionary
@@ -182,6 +167,8 @@ Your project folder is a GitHub repository (Chapter 6). Before you submit:
 1. Edit the `README.md` in your repository (Chapter 6, *README.md*): add a **header** with the repository name and one sentence saying what the repository contains.
 1. Make sure the repository contains the `.Rmd`, `data/A1_Data_Excel.csv`, `images/` with your photo, and the knitted `.html`, and that everything is **committed and pushed**.
 1. Paste the **SHA** of your final commit (Chapter 6, *Timeline*; the 7-character code shown beside each commit on GitHub) below, formatted as in-line code with back-ticks.
+
+# SHA 
 
 Final commit SHA: 
 

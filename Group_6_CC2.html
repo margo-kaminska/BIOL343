@@ -1491,48 +1491,6 @@ font-size: 0.95em;
 </div>
 
 
-<div id="names-student-numbers-and-links-to-github" class="section level3" number="0.0.1">
-<h3><span class="header-section-number">0.0.1</span> Names, Student
-Numbers, and Links to GitHub</h3>
-<ol style="list-style-type: decimal">
-<li><strong>Margo Kaminska</strong> - 20449041
-<ul>
-<li><a href="https://github.com/margo-kaminska/BIOL343">BIOL343_CC</a></li>
-</ul></li>
-<li><strong>Emma Popple</strong> - 20429887
-<ul>
-<li>[BIOL343_CC]</li>
-</ul></li>
-<li><strong>Kaylee Ellwood</strong> - 20467453
-<ul>
-<li>[BIOL343_CC]</li>
-</ul></li>
-<li><strong>Sabrina Baker</strong> - 20449887
-<ul>
-<li>[BIOL343_CC]</li>
-</ul></li>
-<li><strong>Tea Hope</strong> - 20459579
-<ul>
-<li>[BIOL343_CC]</li>
-</ul></li>
-<li><strong>Victoria Gutierrez</strong> - 2051720
-<ul>
-<li>[BIOL343_CC]</li>
-</ul></li>
-</ol>
-<pre><code>getwd()
-setwd(&quot;C:/Users/inbox/OneDrive/Desktop/BIOL343-1&quot;)
-
-remotes::install_url(&quot;https://quantitative.bio/downloads/positpal.tar.gz&quot;, upgrade = &quot;never&quot;)
-library(positpal)
-
-
-
-rmarkdown::render(&quot;Group_6_CC2.Rmd&quot;)
-
-positpal::stop_capture()
-positpal::export_capture()</code></pre>
-</div>
 <div id="do-this-first" class="section level1 unnumbered">
 <h1 class="unnumbered">DO THIS FIRST</h1>
 <p>Copy and paste this into your R Console to start positpal, but
@@ -1540,9 +1498,12 @@ replace <code>FILENAME.Rmd</code> with the name you are going to use for
 the .R or .Rmd file you are going to upload (for this challenge, rename
 the template first, e.g. <code>Group_#_CC2.Rmd</code>, and use that
 exact name). <strong>Do not include it as a code chunk.</strong></p>
-<pre><code>install.packages(&quot;remotes&quot;)
+<pre><code>getwd()
+setwd(&quot;C:/Users/inbox/OneDrive/Desktop/BIOL343-1&quot;)
+install.packages(&quot;remotes&quot;)
 remotes::install_url(&quot;https://quantitative.bio/downloads/positpal.tar.gz&quot;, upgrade = &quot;never&quot;)
-positpal::start(&quot;FILENAME.Rmd&quot;)</code></pre>
+positpal::start(&quot;Group_6_CC2.Rmd&quot;)
+rmarkdown::render(&quot;Group_6_CC2.Rmd&quot;)</code></pre>
 <p>Before you run it: open the project folder for this challenge in
 Positron (<em>File → Open Folder…</em>) so that it is your working
 directory, save this file in that folder under the name you will upload,
@@ -1574,13 +1535,36 @@ bold</strong>, then the student number, and then a
 <strong>sub-item</strong> containing a clickable <strong>link</strong>
 to that member’s GitHub repository, written with Markdown link syntax
 (Chapter 5, <em>Links</em>).</p>
+<div id="names-student-numbers-and-links-to-github" class="section level3" number="2.0.1">
+<h3><span class="header-section-number">2.0.1</span> Names, Student
+Numbers, and Links to GitHub</h3>
 <ol style="list-style-type: decimal">
-<li><strong>Name</strong> — student number
+<li><strong>Margo Kaminska</strong> - 20449041
 <ul>
-<li><a href="https://github.com/your_user_name/BIOL343_CC">BIOL343_CC</a></li>
+<li><a href="https://github.com/margo-kaminska/BIOL343">BIOL343_CC</a></li>
 </ul></li>
-<li></li>
+<li><strong>Emma Popple</strong> - 20467453
+<ul>
+<li><a href="https://github.com/emmapopple/BIOL343_CC">BIOL343_CC</a></li>
+</ul></li>
+<li><strong>Kaylee Ellwood</strong> - 20391007
+<ul>
+<li><a href="https://github.com/kaylee61/BIOL343_CC2.git">BIOL343_CC2</a></li>
+</ul></li>
+<li><strong>Sabrina Baker</strong> - 20449887
+<ul>
+<li><a href="https://github.com/sabrina-baker/BIOL343_CC02">BIOL343_CC</a></li>
+</ul></li>
+<li><strong>Téa Hope</strong> — 20459579
+<ul>
+<li><a href="https://github.com/teahope20/BIOL343.git">BIOL343_CC</a></li>
+</ul></li>
+<li><strong>Victoria Gutierrez</strong> - 20517120
+<ul>
+<li><a href="https://github.com/Victoria-GA/BIOL343_TUT02-CC2_VictoriaGutierrez">BIOL343_CC</a></li>
+</ul></li>
 </ol>
+</div>
 </div>
 <div id="setup-chunk" class="section level1" number="3">
 <h1><span class="header-section-number">3</span> Setup chunk</h1>
@@ -1648,38 +1632,12 @@ below, import it with <code>read.csv()</code>, keep the appropriate rows
 and columns (as you did in Coding Challenge 1), and add the
 <code>ovary_area</code> column (Chapter 3, <em>New Columns</em>). Save
 the cleaned data as <code>cc1_data</code>.</p>
-<pre class="r"><code>getwd()</code></pre>
 <pre><code>## [1] &quot;C:/Users/inbox/OneDrive/Desktop/BIOL343-1&quot;</code></pre>
-<pre class="r"><code>cc1_data &lt;- read.csv(&quot;./data/A1_Data_Excel.csv&quot;)
-View(cc1_data)
-
-cc1_data &lt;- subset(cc1_data[1:46,1:8])
-
-View(cc1_data)
-names(cc1_data)&lt;- c(
-    &quot;population_type&quot;, 
-    &quot;population_name&quot;, 
-    &quot;lattitude&quot;,
-    &quot;longitude&quot;,
-    &quot;ovary_width_mm&quot;,
-    &quot;ovary_height_mm&quot;, 
-    &quot;average_august_temperature&quot;,
-    &quot;flower_number&quot;)
-
-width &lt;- cc1_data$ovary_width_mm
-height &lt;- cc1_data$ovary_height_mm
-cc1_data$ovary_area &lt;- width*height
-ovary_area&lt;-cc1_data$ovary_area</code></pre>
 <p>Now document the inspection commands you used (<code>class()</code>,
 <code>dim()</code>, <code>str()</code>, <code>head()</code>,
 <code>tail()</code>) in the chunk below. Add the chunk option that
 <strong>shows this code in the report but does not run it</strong>, so
 that the reader can see what you checked without pages of output.</p>
-<pre class="r"><code>class(cc1_data)
-dim(cc1_data)
-str(cc1_data)
-head(cc1_data)
-tail(cc1_data)</code></pre>
 </div>
 <div id="equation" class="section level1" number="6">
 <h1><span class="header-section-number">6</span> Equation</h1>
@@ -1764,6 +1722,9 @@ photo, and the knitted <code>.html</code>, and that everything is
 <em>Timeline</em>; the 7-character code shown beside each commit on
 GitHub) below, formatted as in-line code with back-ticks.</li>
 </ol>
+</div>
+<div id="sha" class="section level1" number="11">
+<h1><span class="header-section-number">11</span> SHA</h1>
 <p>Final commit SHA:</p>
 </div>
 <div id="do-this-last" class="section level1 unnumbered">
