@@ -105,7 +105,7 @@ ovary_area<-cc1_data$ovary_area
 
 Now document the inspection commands you used (`class()`, `dim()`, `str()`, `head()`, `tail()`) in the chunk below. Add the chunk option that **shows this code in the report but does not run it**, so that the reader can see what you checked without pages of output.
 
-```{r inspect, eval=F}
+```{r inspect, eval=FALSE, echo=TRUE}
 
 class(cc1_data)
 dim(cc1_data)
